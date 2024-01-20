@@ -2,10 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 import logoSvg from "../../assets/img/pizza-logo.svg";
 import Search from "../Search/Search";
 import { useSelector } from "react-redux";
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import { selectCart } from "../../redux/cart/selectors";
 
-const Header = () => {
+const Header: FC = () => {
   const location = useLocation();
   const { items, totalPrice } = useSelector(selectCart);
   const isMounted = useRef(false);

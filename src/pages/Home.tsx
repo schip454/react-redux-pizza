@@ -5,11 +5,14 @@ import { useAppDispatch } from "../redux/store";
 
 import qs from "qs";
 
-import Categories from "../components/Categories/Categories";
-import Sort, { sortList } from "../components/Sort/Sort";
-import Skeleton from "../components/PizzaBlock/Skeleton";
-import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
-import Pagination from "../components/Pagination/Pagination";
+import {
+  Categories,
+  Sort,
+  Skeleton,
+  PizzaBlock,
+  Pagination,
+} from "../components";
+
 import { selectFilter } from "../redux/filter/selectors";
 import { selectPizzaData } from "../redux/pizza/selectors";
 import { setCategoryId, setCurrentPage } from "../redux/filter/slice";

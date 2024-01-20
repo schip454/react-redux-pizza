@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEvent, useRef, useState } from "react";
+import { ChangeEvent, FC, MouseEvent, useRef, useState } from "react";
 
 import debounce from "lodash.debounce";
 
@@ -7,7 +7,7 @@ import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { setSearchValue } from "../../redux/filter/slice";
 
-const Search = () => {
+const Search: FC = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
